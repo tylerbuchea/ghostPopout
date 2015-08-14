@@ -1,0 +1,61 @@
+#popoutWrapper {
+    height: 100px ;
+    max-width: 600px;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    z-index: 100;
+    transform: translateX(110%);
+    transition: transform 1s;
+}
+
+#popoutExit {
+    cursor: pointer;
+    font-family: arial;
+    position: absolute;
+    right: 90px;
+    top: 0;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    z-index: 101;
+}
+
+#popoutWrapper a {
+    box-shadow: -2px 4px 6px #aaa;
+}
+
+#popoutWrapper.active {
+    transform: translateX(90px);
+}
+
+#popoutWrapper .post:before {
+    height: 100%;
+    background: #3498db;
+    border-radius: 0;
+    padding: 0;
+    width: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 101;
+    content: '';
+}
+
+#popoutWrapper section {
+    background: #f0f0f0;
+    padding: 20px;
+    padding-left: 30px;
+    margin: 0;
+    text-align: left;
+}
+
+#popoutWrapper h2 {
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
+}
+
+#popoutWrapper p {
+    font-size: 100%;
+    color: rgba(0,0,0,0.8);
+}
